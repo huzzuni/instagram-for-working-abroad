@@ -1,14 +1,19 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="instagram_clone" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,11 +21,119 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zy8-Fy-ZzG">
+                                <rect key="frame" x="161" y="318" width="52" height="30"/>
+                                <state key="normal" title="사진선택"/>
+                                <connections>
+                                    <action selector="buttonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hVb-N6-V15"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="JrB-52-z1b">
+                                <rect key="frame" x="67" y="65" width="240" height="208"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lcP-oU-JPD">
+                                <rect key="frame" x="161" y="370" width="52" height="30"/>
+                                <state key="normal" title="필터선택"/>
+                                <connections>
+                                    <segue destination="k9V-jj-7Ik" kind="show" identifier="FilterSegue" id="6iy-pG-VxE"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Zy8-Fy-ZzG" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="QI8-FF-apl"/>
+                            <constraint firstItem="lcP-oU-JPD" firstAttribute="top" secondItem="Zy8-Fy-ZzG" secondAttribute="bottom" constant="22" id="ScR-sA-L4i"/>
+                            <constraint firstItem="JrB-52-z1b" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="51" id="ZhP-IF-wPf"/>
+                            <constraint firstItem="JrB-52-z1b" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="45" id="cA0-7v-U5f"/>
+                            <constraint firstItem="Zy8-Fy-ZzG" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="fK9-Uo-0Ax"/>
+                            <constraint firstItem="JrB-52-z1b" firstAttribute="centerX" secondItem="Zy8-Fy-ZzG" secondAttribute="centerX" id="fQs-xE-Zy3"/>
+                            <constraint firstItem="Zy8-Fy-ZzG" firstAttribute="top" secondItem="JrB-52-z1b" secondAttribute="bottom" constant="45" id="lsd-8U-fZL"/>
+                            <constraint firstItem="lcP-oU-JPD" firstAttribute="leading" secondItem="Zy8-Fy-ZzG" secondAttribute="leading" id="ttx-qE-AcH"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="imageView" destination="JrB-52-z1b" id="xV0-hv-8hp"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-79.200000000000003" y="138.98050974512745"/>
+        </scene>
+        <!--Filter View Controller-->
+        <scene sceneID="apB-Vx-Ekx">
+            <objects>
+                <viewController id="k9V-jj-7Ik" customClass="FilterViewController" customModule="instagram_clone" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="WAC-FW-HIx"/>
+                        <viewControllerLayoutGuide type="bottom" id="m8G-h4-2Fm"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="VYo-yn-982">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="snh-WU-mKK">
+                                <rect key="frame" x="0.0" y="84" width="375" height="375"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="jw9-Ha-2Ya">
+                                <rect key="frame" x="0.0" y="467" width="375" height="180"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Dbg-uI-17F">
+                                    <size key="itemSize" width="83" height="106"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="lF8-qA-OYM" customClass="FilterCell" customModule="instagram_clone" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="37" width="83" height="106"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="83" height="106"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9oo-Tk-7QQ">
+                                                    <rect key="frame" x="0.0" y="38" width="83" height="68"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ml1-lz-BEF">
+                                                    <rect key="frame" x="0.0" y="0.0" width="83" height="37"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="37" id="SA7-WB-Zvi"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstItem="Ml1-lz-BEF" firstAttribute="leading" secondItem="9oo-Tk-7QQ" secondAttribute="leading" id="4L7-cC-U0Y"/>
+                                            <constraint firstAttribute="trailing" secondItem="Ml1-lz-BEF" secondAttribute="trailing" id="cka-nq-g7W"/>
+                                            <constraint firstItem="Ml1-lz-BEF" firstAttribute="leading" secondItem="lF8-qA-OYM" secondAttribute="leading" id="iRB-MQ-vEg"/>
+                                            <constraint firstItem="Ml1-lz-BEF" firstAttribute="top" secondItem="lF8-qA-OYM" secondAttribute="top" id="wPE-MC-whM"/>
+                                            <constraint firstItem="9oo-Tk-7QQ" firstAttribute="top" secondItem="Ml1-lz-BEF" secondAttribute="bottom" constant="1" id="yE1-Fz-lZC"/>
+                                            <constraint firstItem="Ml1-lz-BEF" firstAttribute="trailing" secondItem="9oo-Tk-7QQ" secondAttribute="trailing" id="zVw-mL-wYq"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="filterImage" destination="9oo-Tk-7QQ" id="gUC-ux-LcJ"/>
+                                            <outlet property="filterLabel" destination="Ml1-lz-BEF" id="V0C-Ex-WwY"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="collectionView" destination="jw9-Ha-2Ya" id="4fd-JV-pAJ"/>
+                        <outlet property="imageView" destination="snh-WU-mKK" id="hbc-aw-4aF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jgh-Tf-MXT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="840.79999999999995" y="138.98050974512745"/>
         </scene>
     </scenes>
 </document>

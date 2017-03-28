@@ -12,6 +12,14 @@
 		040FA80A1E83642A00E20F57 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 040FA8081E83642A00E20F57 /* Main.storyboard */; };
 		040FA80C1E83642A00E20F57 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 040FA80B1E83642A00E20F57 /* Assets.xcassets */; };
 		040FA80F1E83642A00E20F57 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 040FA80D1E83642A00E20F57 /* LaunchScreen.storyboard */; };
+		040FA81A1E83659700E20F57 /* SHCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040FA8161E83659700E20F57 /* SHCollectionViewCell.swift */; };
+		040FA81B1E83659700E20F57 /* SHCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 040FA8171E83659700E20F57 /* SHCollectionViewCell.xib */; };
+		040FA81C1E83659700E20F57 /* SHViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040FA8181E83659700E20F57 /* SHViewController.swift */; };
+		040FA81D1E83659700E20F57 /* SHViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 040FA8191E83659700E20F57 /* SHViewController.xib */; };
+		040FA8201E8366A800E20F57 /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 040FA81F1E8366A800E20F57 /* Media.xcassets */; };
+		040FA8221E87F15C00E20F57 /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040FA8211E87F15C00E20F57 /* CollectionViewController.swift */; };
+		040FA8241E87F1FE00E20F57 /* FilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040FA8231E87F1FE00E20F57 /* FilterViewController.swift */; };
+		040FA8261E89D31100E20F57 /* FilterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040FA8251E89D31100E20F57 /* FilterCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +30,14 @@
 		040FA80B1E83642A00E20F57 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		040FA80E1E83642A00E20F57 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		040FA8101E83642A00E20F57 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		040FA8161E83659700E20F57 /* SHCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SHCollectionViewCell.swift; sourceTree = "<group>"; };
+		040FA8171E83659700E20F57 /* SHCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SHCollectionViewCell.xib; sourceTree = "<group>"; };
+		040FA8181E83659700E20F57 /* SHViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SHViewController.swift; sourceTree = "<group>"; };
+		040FA8191E83659700E20F57 /* SHViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SHViewController.xib; sourceTree = "<group>"; };
+		040FA81F1E8366A800E20F57 /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
+		040FA8211E87F15C00E20F57 /* CollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
+		040FA8231E87F1FE00E20F57 /* FilterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilterViewController.swift; sourceTree = "<group>"; };
+		040FA8251E89D31100E20F57 /* FilterCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilterCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +70,30 @@
 		040FA8031E83642A00E20F57 /* instagram-clone */ = {
 			isa = PBXGroup;
 			children = (
+				040FA81E1E83660100E20F57 /* sharaku */,
 				040FA8041E83642A00E20F57 /* AppDelegate.swift */,
 				040FA8061E83642A00E20F57 /* ViewController.swift */,
 				040FA8081E83642A00E20F57 /* Main.storyboard */,
 				040FA80B1E83642A00E20F57 /* Assets.xcassets */,
+				040FA81F1E8366A800E20F57 /* Media.xcassets */,
 				040FA80D1E83642A00E20F57 /* LaunchScreen.storyboard */,
 				040FA8101E83642A00E20F57 /* Info.plist */,
+				040FA8211E87F15C00E20F57 /* CollectionViewController.swift */,
+				040FA8231E87F1FE00E20F57 /* FilterViewController.swift */,
+				040FA8251E89D31100E20F57 /* FilterCell.swift */,
 			);
 			path = "instagram-clone";
+			sourceTree = "<group>";
+		};
+		040FA81E1E83660100E20F57 /* sharaku */ = {
+			isa = PBXGroup;
+			children = (
+				040FA8161E83659700E20F57 /* SHCollectionViewCell.swift */,
+				040FA8171E83659700E20F57 /* SHCollectionViewCell.xib */,
+				040FA8181E83659700E20F57 /* SHViewController.swift */,
+				040FA8191E83659700E20F57 /* SHViewController.xib */,
+			);
+			name = sharaku;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -123,9 +155,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				040FA81D1E83659700E20F57 /* SHViewController.xib in Resources */,
 				040FA80F1E83642A00E20F57 /* LaunchScreen.storyboard in Resources */,
 				040FA80C1E83642A00E20F57 /* Assets.xcassets in Resources */,
 				040FA80A1E83642A00E20F57 /* Main.storyboard in Resources */,
+				040FA8201E8366A800E20F57 /* Media.xcassets in Resources */,
+				040FA81B1E83659700E20F57 /* SHCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -136,8 +171,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				040FA8261E89D31100E20F57 /* FilterCell.swift in Sources */,
+				040FA8241E87F1FE00E20F57 /* FilterViewController.swift in Sources */,
 				040FA8071E83642A00E20F57 /* ViewController.swift in Sources */,
 				040FA8051E83642A00E20F57 /* AppDelegate.swift in Sources */,
+				040FA81A1E83659700E20F57 /* SHCollectionViewCell.swift in Sources */,
+				040FA81C1E83659700E20F57 /* SHViewController.swift in Sources */,
+				040FA8221E87F15C00E20F57 /* CollectionViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -297,6 +337,7 @@
 				040FA8151E83642A00E20F57 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
